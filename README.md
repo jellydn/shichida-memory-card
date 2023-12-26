@@ -1,28 +1,46 @@
-<h1 align="center">Welcome to shichida-memory-card 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-</p>
+# Welcome to Shichida Memory Card 👋
 
-## Usage
+![Version 1.0.0](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
+
+Shichida Memory Card is a dynamic and interactive app designed to enhance memory skills. Built with modern JavaScript technologies, it offers a seamless user experience across various platforms.
+
+## Tech Stack
+
+This project is built using the following technologies:
+
+- **Expo**: Create universal native apps with React that run on Android, iOS, and the web. Iterate with confidence. [Expo Documentation](https://docs.expo.dev/guides/overview/)
+- **React Native Reanimated**: Provides a more fluid user interface for React Native apps. [Getting Started Guide](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/)
+- **Biome**: A modern JavaScript toolchain that is fast and reliable. [Biome Getting Started](https://biomejs.dev/guides/getting-started/)
+- **Bun**: A fast all-in-one JavaScript runtime. [Official Bun Site](https://bun.sh/)
+
+## Installation and Usage
+
+To set up the project, run:
 
 ```sh
 bun install
 ```
 
-Run the app:
+To start the application, execute:
+
 ```sh
 bun run start
-````
+```
 
-## Troubleshoting
+## Troubleshooting
 
-- Can't open iOS simulator
+**Issue**: Can't open iOS simulator.
+
+**Solution**:
+
 ```sh
 sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 ```
 
+## Roadmap
 
-## Show your support
+- [ ] Add support for Android devices.
 
-Give a ⭐ if this project helped you!
+## Support
 
+If this project has been helpful to you, please give it a ⭐ as a token of appreciation!
