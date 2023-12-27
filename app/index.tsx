@@ -5,10 +5,9 @@ import {
 	Box,
 	FlatList,
 	HStack,
-	Avatar,
-	AvatarImage,
 	VStack,
 	Text,
+	Pressable,
 } from "@gluestack-ui/themed";
 import { Image } from "expo-image";
 import { Link } from "expo-router";
@@ -20,7 +19,7 @@ import plantsAndFishSet from "../data/set-2-plants-and-fish.json";
 import humanSet from "../data/set-3-human.json";
 import flagSet1 from "../data/set-4-flags-1.json";
 import flagSet2 from "../data/set-4-flags-2.json";
-import { Pressable } from "react-native";
+import { blurhash } from "../utils/blurhash";
 
 type DeskItem = {
 	id: number;
@@ -30,7 +29,7 @@ type DeskItem = {
 	enableFlipCard: boolean;
 };
 
-const getRandomImage = (items: DeskItem[]) => {
+const getRandomImage = (items: { imageSrc: string }[]) => {
 	const randomIndex = Math.floor(Math.random() * items.length);
 	return items[randomIndex].imageSrc;
 };
@@ -68,14 +67,11 @@ const list = [
 	},
 ];
 
-const blurhash =
-	"|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[";
-
 export default function HomeScreen() {
 	return (
 		<View p="$4">
-			<Heading size="4xl" fontFamily="CommitMono">
-				Desk
+			<Heading alignSelf="center" size="4xl" fontFamily="CommitMono">
+				Shichida Flash Cards
 			</Heading>
 
 			<FlatList
@@ -100,7 +96,7 @@ export default function HomeScreen() {
 							>
 								<HStack>
 									<Image
-										width={"30%"}
+										style={{ width: 300, height: 200 }}
 										contentFit="cover"
 										placeholder={blurhash}
 										source={{
@@ -113,7 +109,11 @@ export default function HomeScreen() {
 										<Text $dark-color="$textLight200" fontSize="$xs" my="$1.5">
 											Desk #{(item as DeskItem).id}
 										</Text>
-										<Heading $dark-color="$textLight200" size="xl">
+										<Heading
+											fontFamily="CommitMono"
+											$dark-color="$textLight200"
+											size="xl"
+										>
 											{(item as DeskItem).name}
 										</Heading>
 									</VStack>
