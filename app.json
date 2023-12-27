@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "shichida-memory-card",
+    "scheme": "shichida-memory-card",
     "slug": "shichida-memory-card",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -26,6 +27,7 @@
       "package": "com.dunghd.shichidamemorycard"
     },
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
@@ -36,7 +38,8 @@
             "./assets/fonts/CommitMono.otf"
           ]
         }
-      ]
+      ],
+      "expo-router"
     ],
     "extra": {
       "eas": {

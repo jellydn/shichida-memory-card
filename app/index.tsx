@@ -1,18 +1,17 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { Link } from "expo-router";
 
-import AnimatedStyle from "../assets/components/AnimatedStyle";
+import AnimatedStyle from "../components/AnimatedStyle";
 
 export default function HomeScreen() {
-	const insets = useSafeAreaInsets();
-
 	return (
-		<View style={{ ...styles.container, paddingTop: insets.top }}>
+		<View style={styles.container}>
 			<Text style={{ fontFamily: "CommitMono", fontSize: 30 }}>
 				Home Screen
 			</Text>
 			<AnimatedStyle />
+			<Link href="/about">About</Link>
 			<StatusBar style="auto" />
 		</View>
 	);
