@@ -410,3 +410,5 @@ userland
 virtualenv
 biomejs
 Shichida
+Pressable
+blurhash

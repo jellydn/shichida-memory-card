@@ -1,9 +1,14 @@
 import { useLocalSearchParams } from "expo-router";
 
-import { Text } from "react-native";
+import { View, Heading } from "@gluestack-ui/themed";
 
-export default function DeskScreen() {
+export default function DeskDetailScreen() {
 	const { slug } = useLocalSearchParams();
-
-	return <Text>Desk : {slug}</Text>;
+	return (
+		<View p="$4">
+			<Heading size="4xl" fontFamily="CommitMono">
+				Slug: {slug}
+			</Heading>
+		</View>
+	);
 }
