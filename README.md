@@ -9,7 +9,9 @@ Shichida Memory Card is a dynamic and interactive app designed to enhance memory
 This project is built using the following technologies:
 
 - **Expo**: Create universal native apps with React that run on Android, iOS, and the web. Iterate with confidence. [Expo Documentation](https://docs.expo.dev/guides/overview/)
+- **Expo Router**: Expo Router is an open-source routing library for Universal React Native applications built with Expo. [Introduction to Expo Router](https://docs.expo.dev/router/introduction/)
 - **React Native Reanimated**: Provides a more fluid user interface for React Native apps. [Getting Started Guide](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/)
+- **Gluestack-ui**: Universal Themed & Unstyled Components for React Native, Next.js, Expo & React. [Introduction](https://gluestack.io/ui/docs/overview/introduction)
 - **Biome**: A modern JavaScript toolchain that is fast and reliable. [Biome Getting Started](https://biomejs.dev/guides/getting-started/)
 - **Bun**: A fast all-in-one JavaScript runtime. [Official Bun Site](https://bun.sh/)
 
