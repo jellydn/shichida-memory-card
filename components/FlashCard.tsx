@@ -1,8 +1,9 @@
-import { Heading, View, Center } from "@gluestack-ui/themed";
+import { Center, Heading, Text, View } from "@gluestack-ui/themed";
+import { Stack } from "expo-router";
 import { Audio } from "expo-av";
 import { Image } from "expo-image";
-import { Dimensions } from "react-native";
 import { useEffect, useState } from "react";
+import { Dimensions } from "react-native";
 
 import { blurhash } from "../utils/blurhash";
 
@@ -16,9 +17,13 @@ async function playSound(uri: string) {
 	console.log("Playing sound", uri);
 	await sound.playAsync();
 }
-
 function capitalizeFirstLetter(str: string) {
 	return str.charAt(0).toUpperCase() + str.slice(1);
+}
+function capitalizeEachWord(str: string) {
+	const words = str.split(" ");
+	const capitalizedWords = words.map((word) => capitalizeFirstLetter(word));
+	return capitalizedWords.join(" ");
 }
 
 const FlashCard = ({
@@ -42,6 +47,14 @@ const FlashCard = ({
 
 	return (
 		<View width={"100%"} height={"100%"}>
+			{active && (
+				<Stack.Screen
+					options={{
+						title: capitalizeEachWord(item.title),
+						headerRight: () => <Text>Info</Text>,
+					}}
+				/>
+			)}
 			{isFlip ? (
 				<Center width={"100%"} height={"100%"}>
 					<Heading fontFamily="CommitMono" textAlign="center" size="5xl">
