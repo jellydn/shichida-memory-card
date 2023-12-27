@@ -1,16 +1,16 @@
-import { StatusBar } from "expo-status-bar";
 import {
-	Heading,
-	View,
 	Box,
 	FlatList,
 	HStack,
-	VStack,
-	Text,
+	Heading,
 	Pressable,
+	Text,
+	VStack,
+	View,
 } from "@gluestack-ui/themed";
 import { Image } from "expo-image";
 import { Link } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 
 import * as React from "react";
 
@@ -96,7 +96,7 @@ export default function HomeScreen() {
 							>
 								<HStack>
 									<Image
-										style={{ width: 300, height: 200 }}
+										style={{ width: 200, height: 150 }}
 										contentFit="cover"
 										placeholder={blurhash}
 										source={{

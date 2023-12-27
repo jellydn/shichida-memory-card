@@ -1,4 +1,4 @@
-import { View, Heading } from "@gluestack-ui/themed";
+import { Heading, View } from "@gluestack-ui/themed";
 import { Link } from "expo-router";
 
 export default function AboutScreen() {

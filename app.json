@@ -1,50 +1,46 @@
 {
-  "expo": {
-    "name": "shichida-memory-card",
-    "scheme": "shichida-memory-card",
-    "slug": "shichida-memory-card",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "automatic",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.dunghd.shichidamemorycard"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.dunghd.shichidamemorycard"
-    },
-    "web": {
-      "bundler": "metro",
-      "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      [
-        "expo-font",
-        {
-          "fonts": [
-            "./assets/fonts/CommitMono.otf"
-          ]
-        }
-      ],
-      "expo-router"
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "2a90389b-c490-4a36-9108-03f4426c7002"
-      }
-    }
-  }
+	"expo": {
+		"name": "shichida-memory-card",
+		"scheme": "shichida-memory-card",
+		"slug": "shichida-memory-card",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/icon.png",
+		"userInterfaceStyle": "automatic",
+		"splash": {
+			"image": "./assets/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "com.dunghd.shichidamemorycard"
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/adaptive-icon.png",
+				"backgroundColor": "#ffffff"
+			},
+			"package": "com.dunghd.shichidamemorycard"
+		},
+		"web": {
+			"bundler": "metro",
+			"favicon": "./assets/favicon.png"
+		},
+		"plugins": [
+			[
+				"expo-font",
+				{
+					"fonts": ["./assets/fonts/CommitMono.otf"]
+				}
+			],
+			"expo-router"
+		],
+		"extra": {
+			"eas": {
+				"projectId": "2a90389b-c490-4a36-9108-03f4426c7002"
+			}
+		}
+	}
 }

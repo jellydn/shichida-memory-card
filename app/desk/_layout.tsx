@@ -1,5 +1,5 @@
 import { ArrowLeftIcon, Icon } from "@gluestack-ui/themed";
-import { Stack, Link, useLocalSearchParams } from "expo-router";
+import { Link, Stack, useLocalSearchParams } from "expo-router";
 
 export default function Layout() {
 	const { slug } = useLocalSearchParams();

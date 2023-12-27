@@ -1,16 +1,16 @@
-import { useLocalSearchParams } from "expo-router";
-import { useQuery } from "@tanstack/react-query";
 import { Text, View } from "@gluestack-ui/themed";
+import { useQuery } from "@tanstack/react-query";
+import { useLocalSearchParams } from "expo-router";
 import Carousel from "react-native-swiper";
 
 import FlashCard from "../../components/FlashCard";
 
+import { useState } from "react";
 import animalSet from "../../data/set-1-animals.json";
 import plantsAndFishSet from "../../data/set-2-plants-and-fish.json";
 import humanSet from "../../data/set-3-human.json";
 import flagSet1 from "../../data/set-4-flags-1.json";
 import flagSet2 from "../../data/set-4-flags-2.json";
-import { useState } from "react";
 
 async function getDeskById(id: string) {
 	switch (id) {
