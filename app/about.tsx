@@ -1,23 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
-
+import { View, Heading } from "@gluestack-ui/themed";
 import { Link } from "expo-router";
 
 export default function AboutScreen() {
 	return (
-		<View style={styles.container}>
-			<Text style={{ fontFamily: "CommitMono", fontSize: 30 }}>
-				About Screen
-			</Text>
+		<View p="$4">
+			<Heading size="4xl" fontFamily="CommitMono">
+				About
+			</Heading>
 			<Link href="/">Home</Link>
 		</View>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: "#fff",
-		alignItems: "center",
-		justifyContent: "center",
-	},
-});

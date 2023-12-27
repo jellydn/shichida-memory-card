@@ -1,4 +1,4 @@
-import { Button, View } from "react-native";
+import { View, Button, ButtonText } from "@gluestack-ui/themed";
 import Animated, { useSharedValue } from "react-native-reanimated";
 
 export default function AnimatedStyle() {
@@ -9,7 +9,7 @@ export default function AnimatedStyle() {
 	};
 
 	return (
-		<View style={{ flex: 1, alignItems: "center" }}>
+		<View p="$4" style={{ flex: 1, alignItems: "center" }}>
 			<Animated.View
 				style={{
 					width,
@@ -17,7 +17,9 @@ export default function AnimatedStyle() {
 					backgroundColor: "violet",
 				}}
 			/>
-			<Button onPress={handlePress} title="Click me" />
+			<Button mt="$4" onPress={handlePress}>
+				<ButtonText>Press me</ButtonText>
+			</Button>
 		</View>
 	);
 }

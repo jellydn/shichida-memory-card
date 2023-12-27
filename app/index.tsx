@@ -1,27 +1,18 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Heading, View } from "@gluestack-ui/themed";
 import { Link } from "expo-router";
 
 import AnimatedStyle from "../components/AnimatedStyle";
 
 export default function HomeScreen() {
 	return (
-		<View style={styles.container}>
-			<Text style={{ fontFamily: "CommitMono", fontSize: 30 }}>
-				Home Screen
-			</Text>
+		<View p="$4">
+			<Heading size="4xl" fontFamily="CommitMono">
+				Home
+			</Heading>
 			<AnimatedStyle />
 			<Link href="/about">About</Link>
 			<StatusBar style="auto" />
 		</View>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: "#fff",
-		alignItems: "center",
-		justifyContent: "center",
-	},
-});
