@@ -29,6 +29,12 @@ To start the application, execute:
 bun run start
 ```
 
+## EAS Build
+
+```sh
+eas build --profile development-simulator --platform ios
+```
+
 ## Troubleshooting
 
 **Issue**: Can't open iOS simulator.
