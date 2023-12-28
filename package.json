@@ -1,47 +1,53 @@
 {
-  "name": "shichida-memory-card",
-  "version": "1.0.0",
-  "private": true,
-  "main": "expo-router/entry",
-  "scripts": {
-    "android": "expo run:android",
-    "check": "npx @biomejs/biome check --apply .",
-    "ios": "expo run:ios",
-    "prebuild": "npx expo prebuild --clean",
-    "start": "expo start",
-    "typescript": "tsc",
-    "web": "expo start --web"
-  },
-  "dependencies": {
-    "@expo/webpack-config": "^19.0.0",
-    "@gluestack-style/react": "^1.0.30",
-    "@gluestack-ui/config": "latest",
-    "@gluestack-ui/themed": "^1.0.33",
-    "@tanstack/react-query": "^5.15.0",
-    "expo": "next",
-    "expo-av": "~13.10.1",
-    "expo-constants": "~15.4.2",
-    "expo-dev-client": "~3.3.4",
-    "expo-font": "~11.10.0",
-    "expo-image": "~1.10.1",
-    "expo-linking": "~6.2.1",
-    "expo-router": "~3.4.1",
-    "expo-splash-screen": "~0.26.1",
-    "expo-status-bar": "~1.11.1",
-    "expo-system-ui": "~2.9.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-native": "0.73.1",
-    "react-native-safe-area-context": "4.8.2",
-    "react-native-screens": "~3.27.0",
-    "react-native-svg": "13.4.0",
-    "react-native-swiper": "^1.6.0",
-    "react-native-web": "~0.19.10"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.23.6",
-    "@biomejs/biome": "^1.4.1",
-    "@types/react": "~18.2.45",
-    "typescript": "^5.3.3"
-  }
+	"name": "shichida-memory-card",
+	"version": "1.0.0",
+	"private": true,
+	"main": "expo-router/entry",
+	"scripts": {
+		"android": "expo run:android",
+		"check": "npx @biomejs/biome check --apply .",
+		"postinstall": "npx husky install",
+		"ios": "expo run:ios",
+		"prebuild": "npx expo prebuild --clean",
+		"start": "expo start",
+		"typescript": "tsc",
+		"web": "expo start --web"
+	},
+	"nano-staged": {
+		"*.{js,ts,json,md}": "biome check --apply"
+	},
+	"dependencies": {
+		"@expo/webpack-config": "^19.0.0",
+		"@gluestack-style/react": "^1.0.30",
+		"@gluestack-ui/config": "latest",
+		"@gluestack-ui/themed": "^1.0.33",
+		"@tanstack/react-query": "^5.15.0",
+		"expo": "next",
+		"expo-av": "~13.10.1",
+		"expo-constants": "~15.4.2",
+		"expo-dev-client": "~3.3.4",
+		"expo-font": "~11.10.0",
+		"expo-image": "~1.10.1",
+		"expo-linking": "~6.2.1",
+		"expo-router": "~3.4.1",
+		"expo-splash-screen": "~0.26.1",
+		"expo-status-bar": "~1.11.1",
+		"expo-system-ui": "~2.9.2",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-native": "0.73.1",
+		"react-native-safe-area-context": "4.8.2",
+		"react-native-screens": "~3.27.0",
+		"react-native-svg": "13.4.0",
+		"react-native-swiper": "^1.6.0",
+		"react-native-web": "~0.19.10"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.23.6",
+		"@biomejs/biome": "^1.4.1",
+		"@types/react": "~18.2.45",
+		"husky": "^8.0.3",
+		"nano-staged": "^0.8.0",
+		"typescript": "^5.3.3"
+	}
 }
