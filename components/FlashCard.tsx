@@ -1,7 +1,7 @@
 import { Center, Heading, Text, View } from "@gluestack-ui/themed";
-import { Stack } from "expo-router";
 import { Audio } from "expo-av";
 import { Image } from "expo-image";
+import { Stack } from "expo-router";
 import { useEffect, useState } from "react";
 import { Dimensions } from "react-native";
 
