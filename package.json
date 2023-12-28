@@ -10,7 +10,7 @@
 		"ios": "expo run:ios",
 		"prebuild": "npx expo prebuild --clean",
 		"start": "expo start",
-		"typescript": "tsc",
+		"typecheck": "tsc --noEmit",
 		"web": "expo start --web"
 	},
 	"nano-staged": {
