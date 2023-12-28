@@ -3,11 +3,9 @@ import { Audio } from "expo-av";
 import { Image } from "expo-image";
 import { Stack } from "expo-router";
 import { useEffect, useState } from "react";
-import { Dimensions } from "react-native";
+import { useWindowDimensions } from "react-native";
 
 import { blurhash } from "../utils/blurhash";
-
-const { width: screenWidth, height: screenHeight } = Dimensions.get("window");
 
 async function playSound(uri: string) {
 	console.log("Loading sound", uri);
@@ -33,6 +31,8 @@ const FlashCard = ({
 	item: { picture: string; sound: string; title: string };
 	active: boolean;
 }) => {
+	const { height, width } = useWindowDimensions();
+
 	const [isFlip, setIsFlip] = useState(false);
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: Only play sound when active changes
@@ -68,7 +68,7 @@ const FlashCard = ({
 						uri: item.picture,
 					}}
 					alt={item.title}
-					style={{ width: screenWidth, height: screenHeight }}
+					style={{ width, height }}
 				/>
 			)}
 		</View>
