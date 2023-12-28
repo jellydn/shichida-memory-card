@@ -50,6 +50,10 @@ sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
 - [ ] Add support for Android devices.
 
+## References
+
+- [Expo SDK 50 beta is now available - Expo Changelog](https://expo.dev/changelog/2023/12-12-sdk-50-beta)
+
 ## Support
 
 If this project has been helpful to you, please give it a ⭐ as a token of appreciation!
