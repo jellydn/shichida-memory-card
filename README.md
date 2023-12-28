@@ -34,6 +34,7 @@ bun run start
 
 ```sh
 eas build --profile development-simulator --platform ios
+eas build --profile development-simulator --platform android
 ```
 
 ## Troubleshooting
@@ -48,7 +49,10 @@ sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
 ## Roadmap
 
-- [ ] Add support for Android devices.
+- [ ] Add splash screen
+- [ ] Add app icon
+- [ ] Add settings screen
+- [ ] Add music & sound effects
 
 ## References
 
