@@ -45,14 +45,18 @@
 		],
 		"extra": {
 			"eas": {
-				"projectId": "2a90389b-c490-4a36-9108-03f4426c7002"
+				"projectId": "56bcc5f8-f91e-4309-bc40-a369049022fd"
+			},
+			"router": {
+				"origin": false
 			}
 		},
 		"runtimeVersion": {
 			"policy": "appVersion"
 		},
 		"updates": {
-			"url": "https://u.expo.dev/2a90389b-c490-4a36-9108-03f4426c7002"
-		}
+			"url": "https://u.expo.dev/56bcc5f8-f91e-4309-bc40-a369049022fd"
+		},
+		"owner": "dunghd"
 	}
 }
