@@ -1,28 +1,28 @@
 {
 	"expo": {
-		"name": "shichida-memory-card",
-		"scheme": "shichida-memory-card",
-		"slug": "shichida-memory-card",
+		"name": "Shichida Memory Cards",
+		"scheme": "shichida-memory-cards",
+		"slug": "shichida-memory-cards",
 		"version": "1.0.0",
-		"orientation": "portrait",
 		"icon": "./assets/icon.png",
 		"userInterfaceStyle": "automatic",
 		"splash": {
 			"image": "./assets/splash.png",
 			"resizeMode": "contain",
-			"backgroundColor": "#ffffff"
+			"backgroundColor": "#D3EDD4"
 		},
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
+			"requireFullScreen": true,
 			"supportsTablet": true,
-			"bundleIdentifier": "com.dunghd.shichidamemorycard"
+			"bundleIdentifier": "com.dunghd.shichidamemorycards"
 		},
 		"android": {
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/adaptive-icon.png",
-				"backgroundColor": "#ffffff"
+				"backgroundColor": "#D3EDD4"
 			},
-			"package": "com.dunghd.shichidamemorycard"
+			"package": "com.dunghd.shichidamemorycards"
 		},
 		"web": {
 			"bundler": "metro",
@@ -33,6 +33,12 @@
 				"expo-font",
 				{
 					"fonts": ["./assets/fonts/CommitMono.otf"]
+				}
+			],
+			[
+				"expo-screen-orientation",
+				{
+					"initialOrientation": "LANDSCAPE"
 				}
 			],
 			"expo-router"
