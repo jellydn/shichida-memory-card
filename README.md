@@ -57,6 +57,7 @@ sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 ## References
 
 - [Expo SDK 50 beta is now available - Expo Changelog](https://expo.dev/changelog/2023/12-12-sdk-50-beta)
+- [Building splash screens in React Native - LogRocket Blog](https://blog.logrocket.com/building-splash-screens-react-native/)
 
 ## Support
 
