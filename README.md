@@ -30,8 +30,14 @@ To start the application, execute:
 bun run start
 ```
 
-## EAS Build
+## EAS 
 
+### Setup
+```sh
+eas init
+```
+
+### Build
 ```sh
 eas build --profile development-simulator --platform ios
 eas build --profile development-simulator --platform android
@@ -49,8 +55,6 @@ sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
 ## Roadmap
 
-- [ ] Add splash screen
-- [ ] Add app icon
 - [ ] Add settings screen
 - [ ] Add music & sound effects
 
@@ -58,6 +62,7 @@ sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
 - [Expo SDK 50 beta is now available - Expo Changelog](https://expo.dev/changelog/2023/12-12-sdk-50-beta)
 - [Building splash screens in React Native - LogRocket Blog](https://blog.logrocket.com/building-splash-screens-react-native/)
+- [Expo Go for iOS - TestFlight](https://testflight.apple.com/join/GZJxxfUU)
 
 ## Support
 
