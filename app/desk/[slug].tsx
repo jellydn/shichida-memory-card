@@ -50,7 +50,7 @@ export default function DeskDetailScreen() {
 				<Carousel
 					autoplay={true}
 					loop={false}
-					autoplayTimeout={1.7}
+					autoplayTimeout={2}
 					showsButtons={true}
 					showsPagination={false}
 					onMomentumScrollEnd={async (_e, state, _context) => {
@@ -61,6 +61,7 @@ export default function DeskDetailScreen() {
 					{data.map((item, index) => (
 						<FlashCard
 							key={item.title}
+							currentPosition={`${index + 1} / ${data.length}`}
 							item={{
 								picture: item.imageSrc,
 								sound: item.mp3,

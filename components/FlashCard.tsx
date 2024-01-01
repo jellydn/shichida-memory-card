@@ -27,9 +27,11 @@ function capitalizeEachWord(str: string) {
 const FlashCard = ({
 	item,
 	active,
+	currentPosition,
 }: {
 	item: { picture: string; sound: string; title: string };
 	active: boolean;
+	currentPosition: string;
 }) => {
 	const { height, width } = useWindowDimensions();
 
@@ -41,7 +43,7 @@ const FlashCard = ({
 			playSound(item.sound);
 			setTimeout(() => {
 				setIsFlip(true);
-			}, 800);
+			}, 1400);
 		}
 	}, [active]);
 
@@ -51,7 +53,7 @@ const FlashCard = ({
 				<Stack.Screen
 					options={{
 						title: capitalizeEachWord(item.title),
-						headerRight: () => <Text>Info</Text>,
+						headerRight: () => <Text>{currentPosition}</Text>,
 					}}
 				/>
 			)}
