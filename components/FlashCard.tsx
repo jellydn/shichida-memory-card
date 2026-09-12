@@ -1,5 +1,5 @@
 import { Center, Heading, Text, View } from "@gluestack-ui/themed";
-import { Audio } from "expo-av";
+import { useAudioPlayer } from "expo-audio";
 import { Image } from "expo-image";
 import { Stack } from "expo-router";
 import { useEffect, useState } from "react";
@@ -7,14 +7,6 @@ import { useWindowDimensions } from "react-native";
 
 import { blurhash } from "../utils/blurhash";
 
-async function playSound(uri: string) {
-	console.log("Loading sound", uri);
-	const { sound } = await Audio.Sound.createAsync({
-		uri,
-	});
-	console.log("Playing sound", uri);
-	await sound.playAsync();
-}
 function capitalizeFirstLetter(str: string) {
 	return str.charAt(0).toUpperCase() + str.slice(1);
 }
@@ -34,18 +26,22 @@ const FlashCard = ({
 	currentPosition: string;
 }) => {
 	const { height, width } = useWindowDimensions();
-
+	const player = useAudioPlayer(active ? item.sound : null);
 	const [isFlip, setIsFlip] = useState(false);
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: Only play sound when active changes
 	useEffect(() => {
-		if (active) {
-			playSound(item.sound);
-			setTimeout(() => {
-				setIsFlip(true);
-			}, 1400);
+		if (!active) {
+			return;
 		}
-	}, [active]);
+
+		player.seekTo(0);
+		player.play();
+		const flipTimer = setTimeout(() => {
+			setIsFlip(true);
+		}, 1400);
+
+		return () => clearTimeout(flipTimer);
+	}, [active, player]);
 
 	return (
 		<View width={"100%"} height={"100%"}>
